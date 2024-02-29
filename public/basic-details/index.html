@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Details</title>
+    <!--Font awesome CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <!--Lock icon-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Link to CSS-->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <aside></aside>
+    <div class="main-wrapper">
+        <header>Basic Details</header>
+        <form action="">
+            <div>
+                <fieldset class="details">
+                    <legend class="details-legend" id="nameLegend">First Name  <span class="required" id="nameSpan">*First Name required</span></legend>
+                    <i class="fas fa-check check" id="checkName"></i>
+                    <i class="fas fa-times cross" id="crossName"></i>
+                    <input class="details-input" id="nameInput" type="text" onfocus="changeColor('nameLegend')" onblur="changeColorBack('nameLegend')">
+                </fieldset>
+                <fieldset class="details">
+                    <legend class="details-legend" id="emailLegend">Email ID  <span class="required" id="mailSpan">*Email ID required</span></legend>
+                    <i class="fas fa-check check" id="checkMail"></i>
+                    <i class="fas fa-times cross" id="crossMail"></i>
+                    <input class="details-input" id="mailInput" type="text" onfocus="changeColor('emailLegend')" onblur="changeColorBack('emailLegend')">
+                </fieldset>
+                <fieldset class="details">
+                    <legend class="details-legend" id="countryLegend">Country  <span class="required" id="countrySpan">*Country required</span></legend>
+					<select class="details-input"  id="country" name ="country" onfocus="changeColor('countryLegend')" onblur="changeColorBack('countryLegend')"></select> 
+                </fieldset>
+                <fieldset class="details">
+                    <legend class="details-legend" id="numberLegend">Phone Number  <span class="required" id="phoneSpan">*Phone Number required</span></legend>
+                    <i class="fas fa-check check" id="checkNumber"></i>
+                    <i class="fas fa-times cross" id="crossNumber"></i>
+                    <input class="details-input" id="numberInput" type="text" onfocus="changeColor('numberLegend')" onblur="changeColorBack('numberLegend');">
+                </fieldset>
+            </div>
+            <div>
+                <fieldset class="details">
+                    <legend class="details-legend" id="surnameLegend">Last Name  <span class="required" id="surnameSpan">*Last Name required</span></legend>
+                    <i class="fas fa-check check" id="checkSurname"></i>
+                    <i class="fas fa-times cross" id="crossSurname"></i>
+                    <input class="details-input" id="surnameInput" type="text" onfocus="changeColor('surnameLegend')" onblur="changeColorBack('surnameLegend');">
+                </fieldset>
+                <fieldset class="details">
+                    <legend class="details-legend" id="userIDLegend">Your User ID  <span class="required" id="userSpan">*User ID required</span></legend>
+                    <i class="material-icons" id="lock">&#xe899;</i>
+                    <input class="details-input" id="idInput" type="text" onfocus="changeColor('userIDLegend')" onblur="changeColorBack('userIDLegend');">
+                </fieldset>
+                <fieldset class="details short-details">
+                    <div>
+                        <legend class="details-legend" id="stateLegend">State  <span class="required" id="stateSpan">*State required</span></legend>
+						<select class="details-input" name ="state" id ="state" onfocus="changeColor('stateLegend')" onblur="changeColorBack('stateLegend')"></select>      
+                    </div>  
+                    <div>
+                        <legend class="details-legend" id="cityLegend">City  <span class="required" id="citySpan">*City required</span></legend>
+                        <select class="details-input" name ="city" id ="city" onfocus="changeColor('cityLegend')" onblur="changeColorBack('cityLegend')"></select>   
+                    </div>  
+                </fieldset>
+                <fieldset class="details">
+                    <i class="fas fa-check check" id="checkCode"></i>
+                    <i class="fas fa-times cross" id="crossCode"></i>
+                    <input class="details-input" type="text" id="codeInput" placeholder="Reference Code" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Reference Code'">
+                </fieldset>
+            </div>
+        </form>
+        <div id="buttons-footer">
+            <div class="button-Div" id="reset-button">
+                <a href="#" onclick="resetAll()">Reset All</a>
+            </div>
+            <div class="button-Div" id="continue-margin">
+                <input id="continue-btn" type="button" value="Continue">
+            </div>
+        </div>
+    </div>
+    <!--Link to script-->
+    <script src="code.js"></script>
+    <!--Script to get countries, state and cities-->
+    <script src="countries.js"></script>
+    <!--On load of webpage, execute the following code-->
+    <script>
+        populateCountries("country", "state", "city"); 
+        document.getElementById("nameInput").focus();
+    </script>
+</body>
+</html>

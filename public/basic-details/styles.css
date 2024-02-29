@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin|Herr+Von+Muellerhoff|Source+Sans+Pro:400,900&display=swap');
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --main-font: 'Cabin', sans-serif;
+    --main-font-color: #323232;
+    --secondary-font-color: #cccccc;
+    --blue-color: #48A5EA;
+}
+html{
+    font-family: var(--main-font);
+    font-size: 10px;
+    background-color: #E8E8E8;
+}
+.main-wrapper{
+    background-color: white;
+    height: 100vh;
+    width: 85%;
+    position: absolute;
+    right: 2.5%;
+    z-index: 10;
+    border-radius: 0 10px 10px 0;
+    padding: 2.3%;
+    padding-top: 0;
+    overflow: hidden;
+}
+aside{
+    z-index: 1;
+    background-color: var(--blue-color);
+    height: 100vh;
+    width: 50%;
+    position: absolute;
+}
+header{
+    color: var(--blue-color);
+    font-size: 1.7vw;
+    border-bottom: 2px solid var(--secondary-font-color);
+    padding: 2%;
+    padding-left: 0;
+}
+form{
+    margin-top: 7%;
+    height: 60vh;
+    width: 100%;
+    padding-top: 2%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2%;
+    border-bottom: 2px solid var(--secondary-font-color);
+}
+#buttons-footer{
+    width: 100%;
+    height: 20%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2%;
+    font-size: 0.9vw;
+}
+.button-Div{
+    height: 99%;
+}
+#continue-btn{
+    background-color: var(--blue-color);
+    color: white;
+    border: none;
+    box-shadow: 2px 2px 2px #b1b1b1;
+    padding: 2%;
+    width: 20%;
+    border-radius: 100px;
+    font-size: inherit;
+    float: right;
+    font-weight: bold;
+}
+a{
+    text-decoration: none;
+    color: var(--secondary-font-color);
+}
+#reset-button{
+    padding: 10%;
+    padding-left: 0;
+}
+#continue-margin{
+    padding: 8%;
+    padding-right: 0;
+}
+#continue-btn:hover{
+    color: var(--blue-color);
+    background-color: transparent;
+    border: 1px solid var(--blue-color);
+    cursor: pointer;
+}
+a:hover{
+    color: var(--blue-color);
+}
+.details{
+    border: none;
+}
+.details-legend{
+    color: var(--secondary-font-color);
+    font-size: 0.7vw;
+}
+.details-input{
+    margin-top: 1%;
+    height: 2vw;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid var(--secondary-font-color);
+    margin-bottom: 5%;
+    font-size: 1vw;
+}
+.details-input::placeholder{
+    color: var(--secondary-font-color);
+    font-size: 1vw;
+}
+.details-input:focus{
+    border-color: var(--blue-color);
+    outline: none;
+}
+.short-details{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10%;
+    margin-top: 0.5%;
+    margin-bottom: 5%;
+}
+.check{
+    color: #8ACA86;
+    font-size: 0.8vw;
+    position: absolute;
+    margin-top: 1%;
+    margin-left: 45.4%;
+    visibility: hidden;
+}
+.cross{
+    color: red;
+    font-size: 0.8vw;
+    position: absolute;
+    margin-top: 1%;
+    margin-left: 45.7%;
+    z-index: 1000;
+    visibility: hidden;
+}
+#lock{
+    color: #777777;
+    font-size: 1vw;
+    position: absolute;
+    margin-top: 1%;
+    margin-left: 45.3%;
+    z-index: 1000;
+}
+span{
+    color: #cc1d1d;
+    visibility: hidden;
+}
+
